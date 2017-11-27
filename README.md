@@ -22,10 +22,10 @@ The database will consist of a table called beer. The ID, name, brewery, country
 
 ### Project Workflow: 
 
-Lauren - Backend 💻
+Lauren - Backend/Readme/Logo Design/wireframe 💻
 
-Syed - Backend 💻
+Syed - Backend/Frontend 💻
 
-Abrian - Frontend 💻
+Abrian - Frontend/🍻 💻
 
 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻
