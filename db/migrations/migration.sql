@@ -1,3 +1,4 @@
+DROP TABLE beer;
 CREATE TABLE IF not exists beer (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255),
