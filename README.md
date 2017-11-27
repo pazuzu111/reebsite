@@ -18,9 +18,5 @@ The database will consist of a table called beer. The ID, name, brewery, country
 ![alternateText](https://i.imgur.com/u5qkRdf.gif)
 
 
-### Additional REQs
 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻
 
-## You must also include one of the following additional requirements
-
-## We are going to use a new NPM package
