@@ -1,5 +1,5 @@
-INSERT INTO beer (name, brewery, country, abv) VALUES ('Abrian Special','Abrian Brewery House', 'Egypt', '8%');
-INSERT INTO beer (name, brewery, country, abv) VALUES ('Raging Bitch','Flying Dog', 'USA', '8.3%');
-INSERT INTO beer (name, brewery, country, abv) VALUES ('Snakedog','Flying Dog', 'USA', '8.3%');
-INSERT INTO beer (name, brewery, country, abv) VALUES ('Morning Delight','Toppling', 'USA', '12%');
-INSERT INTO beer (name, brewery, country, abv) VALUES ('Julius','Treehouse', 'USA', '6.8%');
+INSERT INTO beer (name, brewery, country, abv, url) VALUES ('Abrian Special','Abrian Brewery House', 'Egypt', '8%' 'https://www.menshealth.com/sites/menshealth.com/files/beer-main_0.jpg');
+INSERT INTO beer (name, brewery, country, abv, url) VALUES ('Raging Bitch','Flying Dog', 'USA', '8.3%', 'http://www.thethirstymuse.com/wp-content/uploads/2012/04/20120312_HoppingMad_RagingBitch_D300__DSC6154.jpg');
+INSERT INTO beer (name, brewery, country, abv, url) VALUES ('Snakedog','Flying Dog', 'USA', '8.3%', 'http://www.thebarleyblog.com/wp-content/uploads/2017/03/pr-flying-dog-snake-dog-20.jpg');
+INSERT INTO beer (name, brewery, country, abv, url) VALUES ('Morning Delight','Toppling', 'USA', '12%', 'https://i2.wp.com/wearebrewstuds.com/wp-content/uploads/2017/10/craft-beer-topling-goliath-mornin-delight.png?fit=1080%2C720');
+INSERT INTO beer (name, brewery, country, abv, url) VALUES ('Julius','Treehouse', 'USA', '6.8%', 'https://stupiddope.com/wp-content/uploads/2016/03/Tree-House-Julius.jpg');
