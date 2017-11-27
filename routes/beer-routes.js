@@ -1,7 +1,7 @@
 const express = require('express');
 
 const beerRouter = express.Router();
-const beerontroller = require('../controllers/beer-controller');
+const beerController = require('../controllers/beer-controller');
 
 beerRouter.route('/')
   .get(beerController.index)
