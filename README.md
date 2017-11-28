@@ -14,7 +14,7 @@ The user is someone who is a beer fanatic or someone who is just curious about d
 
 ### Database Structure:
 
-The database will consist of a table of beer that the user will consider their favorites. When the user clicks on a listed beer style then they will see some details about that beer. For instance, when a user clicks on IPA style beer then it will show all of the IPA beers. The user will then be able to add a beer to their favorites, which is the database. Which they can also delete(from the DB). 
+The database will consist of a table of beer that the user will consider their favorites. When the user clicks on a listed beer style then they will see some details about that beer. For instance, when a user clicks on IPA style beer then it will show all of the IPA beers. The user will then be able to add a beer to their favorites, which is the database. Which they can also delete(from the DB). We are only adding favorite beers into the database everthing else is pulled from the API.
 
 ![alternateText](https://i.imgur.com/u5qkRdf.gif)
 
@@ -38,7 +38,13 @@ Abrian - Frontend 💻
 
 ### ADVANCED Wireframe: 
 ![alternateText](https://i.imgur.com/Wg8n8yJ.png)
+🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻
+
+### Additional REQs:
+
+We have incoperated a third part API.
 
 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻
-# 🍻 CHEERS 🍻
+
+# 🍻 CHEERS ! 🍻
 ![alternateText](https://i.imgur.com/IDQbMlH.jpg)
