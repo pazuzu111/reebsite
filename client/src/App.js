@@ -21,8 +21,6 @@ export default class App extends Component {
     componentDidMount(){
       //get all beer stlyes
       this.getStyles();
-      console.log("styles")
-      console.log(this.state.styleList)
     }
 
     //on click fetch specific style beers
@@ -30,8 +28,6 @@ export default class App extends Component {
       fetch(`https://api.brewerydb.com/v2/beers?key=4aa4b1906564a0a282453e69a7eeaf9a&styleId=${id}`)
       .then(res=>res.json())
       .then(res=> {
-        console.log("clickres")
-        console.log(res)
         this.setState({
           beerList: res.data,
           dataLoaded2: true
@@ -44,8 +40,6 @@ export default class App extends Component {
       fetch('https://api.brewerydb.com/v2/styles?key=4aa4b1906564a0a282453e69a7eeaf9a')
       .then(res => res.json())
       .then(res => {
-        console.log("stylesres")
-        console.log(res)
         this.setState({
           styleList: res.data,
           dataLoaded: true
