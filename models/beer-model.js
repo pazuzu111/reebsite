@@ -2,12 +2,10 @@ const db = require('../db/config');
 
 class Beer {
   constructor(beer) {
+    console.log(beer)
     this.id = beer.id || null;
-    this.name = this.__validate(beer.name, 'name');
-    this.brewery = this.__validate(beer.brewery, 'brewery');
-    this.country = this.__validate(beer.country, 'country');
-    this.abv = this.__validate(beer.abv, 'abv');
-    this.url = this.__validate(beer.url, 'url');
+    this.brewid = this.__validate(beer.brewid, 'brewid')
+
 
   }
 
@@ -43,25 +41,25 @@ class Beer {
   save() {
     return db.one(`
       INSERT INTO beer
-      (name, brewery, country, abv, url)
-      VALUES ($/name/, $/brewery/, $/country/, $/abv/, $/url/)
+      (brewid)
+      VALUES ($/brewid/)
       RETURNING *
     `, this).then(beer => this.__modify(beer));
   }
 
-  update(changes) {
-    this.__modify(changes);
-    return db.one(`
-      UPDATE beer SET
-      name = $/name/,
-      brewery = $/brewery/,
-      country = $/country/,
-      abv = $/abv/,
-      url = $/url/
-      WHERE id = $/id/
-      RETURNING *
-    `, this).then(beer => this.__modify(beer));
-  }
+  // update(changes) {
+  //   this.__modify(changes);
+  //   return db.one(`
+  //     UPDATE beer SET
+  //     name = $/name/,
+  //     brewery = $/brewery/,
+  //     country = $/country/,
+  //     abv = $/abv/,
+  //     url = $/url/
+  //     WHERE id = $/id/
+  //     RETURNING *
+  //   `, this).then(beer => this.__modify(beer));
+  // }
 
 }
 

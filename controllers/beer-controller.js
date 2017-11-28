@@ -30,11 +30,7 @@ beerController.show = (req, res, next) => {
 beerController.create = (req, res, next) => {
   try {
     new Beer({
-      name: req.body.name,
-      brewery: req.body.brewery,
-      country: req.body.country,
-      abv: req.body.abv,
-      url: req.body.url,
+      brewid:req.body.brewid
     })
       .save()
       .then(beer => {

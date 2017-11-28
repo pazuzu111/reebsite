@@ -4,7 +4,7 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 import Beerstyle from './Beerstyle';
 import Beerlist from './Beerlist';
-
+import Favorites from './Favorites'
 export default class App extends Component {
   constructor(){
     super()
@@ -59,8 +59,8 @@ export default class App extends Component {
         <div className="App">
           <div className="container">
 
-{/*            <Beerstyle styleList={this.state.styleList} beerOnClick={() => this.beerOnClick()} dataLoaded={this.state.dataLoaded} />
-*/}
+
+            <Favorites/>
             <div className="scrollContainer">
             {this.state.dataLoaded ?
             this.state.styleList.map((x, i) => {

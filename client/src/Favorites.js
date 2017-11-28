@@ -9,30 +9,14 @@ export default class Favorites extends Component {
         }
     }
 
-
-    componentDidMount(){
-
-        //get all Favorites
-        getFavorites(){
-            fetch('')
-            .then(res => res.json())
-            .then(res => {
-                this.setState({
-                    favorites: res,
-                    likesLoaded: true
-                })
-            })
-        }
-    }
-
     render(){
       return(
-
-          {this.state.likesLoaded ?
-              props.favorites.map((x, i) {
+          this.state.likesLoaded ?
+              this.state.favorites.map((x, i) => {
                   <h1 key={i}> {x.favorites} </h1>
               })
-          }
+              :<p>loading favs</p>
+
       )
     }
 
