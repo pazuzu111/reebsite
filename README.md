@@ -41,4 +41,4 @@ Abrian - Frontend 💻
 
 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻
 # 🍻 CHEERS 🍻
-![alternateText]https://i.imgur.com/IDQbMlH.jpg
+![alternateText](https://i.imgur.com/IDQbMlH.jpg)
