@@ -10,8 +10,8 @@ return (
       <nav>
         <ul>
           <li><Link to="/">Home</Link></li>
-          <li><Link to="/beer">Beer </Link></li> //this was ice-cream before..
-          <li><Link to="/new">Add Another Beer</Link></li> //check this work
+          <li><Link to="/beer">Beer </Link></li>
+          <li><Link to="/new">Add Another Beer</Link></li>
         </ul>
       </nav>
     </header>
