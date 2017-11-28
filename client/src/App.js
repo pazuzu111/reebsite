@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import Beerstyle from './Beerstyle';
@@ -16,7 +14,7 @@ export default class App extends Component {
       dataLoaded2: false,
       beerList: null
     }
-    this.beerOnCLick = this.beerOnCLick.bind(this)
+    this.beerOnClick = this.beerOnClick.bind(this)
     this.getStyles = this.getStyles.bind(this)
   }
 
@@ -28,8 +26,8 @@ export default class App extends Component {
     }
 
     //on click fetch specific style beers
-    beerOnCLick(id){
-      fetch(`https://api.brewerydb.com/v2/beers?key=3bc036cfce2c67f3aa2a2ac4c893cb41&styleId=${id}`)
+    beerOnClick(id){
+      fetch(`https://api.brewerydb.com/v2/beers?key=4aa4b1906564a0a282453e69a7eeaf9a&styleId=${id}`)
       .then(res=>res.json())
       .then(res=> {
         console.log("clickres")
@@ -43,7 +41,7 @@ export default class App extends Component {
 
 
     getStyles() {
-      fetch('https://api.brewerydb.com/v2/styles?key=3bc036cfce2c67f3aa2a2ac4c893cb41')
+      fetch('https://api.brewerydb.com/v2/styles?key=4aa4b1906564a0a282453e69a7eeaf9a')
       .then(res => res.json())
       .then(res => {
         console.log("stylesres")
@@ -58,21 +56,28 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-      <Router>
         <div className="App">
-          <Header />
           <div className="container">
 
-            <Beerstyle styleList={this.state.styleList} beerOnClick={() =>this.beerOnCLick} dataLoaded={this.state.dataLoaded} />
-            {this.state.dataLoaded2 ? (
+{/*            <Beerstyle styleList={this.state.styleList} beerOnClick={() => this.beerOnClick()} dataLoaded={this.state.dataLoaded} />
+*/}
+            <div className="scrollContainer">
+            {this.state.dataLoaded ?
+            this.state.styleList.map((x, i) => {
+            return (
+              <h1 key={i}  onClick={() => this.beerOnClick(this.state.styleList[i].id)}> {this.state.styleList[i].name} </h1>
+              )
+            })
+            :
+            <p> Loading... </p>}
+      </div>
+
             <Beerlist beerList={this.state.beerList} dataLoaded={this.state.dataLoaded2} />
-            ) : (<p>Loading</p>
-            )}
+
 
           </div>
           <Footer />
         </div>
-      </Router>
 
       </div>
     );
