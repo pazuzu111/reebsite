@@ -26,7 +26,7 @@ Lauren - Backend/Readme/Logo Design/wireframe 💻
 
 Syed - Backend/Frontend 💻
 
-Abrian - Frontend/🍻 💻
+Abrian - Frontend/ 💻
 
 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻
 
