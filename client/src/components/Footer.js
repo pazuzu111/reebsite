@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer>
-      Made with ❤️ by Lauren, Syed and Abrian !
+      By Lauren, Syed and Abrian !
     </footer>
   );
 };
