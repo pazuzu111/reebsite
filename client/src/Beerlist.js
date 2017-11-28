@@ -2,16 +2,16 @@ import React from 'react';
 
 
 const Beerlist = props => {
-  console.log("beerlist")
-  console.log(props)
 
-  function likeHandler(id){
+  function likeHandler(name){
     fetch('/api/beer', {
       method: 'POST',
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify({brewid:id})
+      body: JSON.stringify({
+        brewid:name,
+      })
     })
   }
 
@@ -24,11 +24,11 @@ const Beerlist = props => {
             <p>{x.brewery}</p>
             <p>{x.country}</p>
             <p>{x.abv}</p>
-            <button onClick={() => likeHandler(x.id)}> add to favorites! </button>
+            <button onClick={() => likeHandler(x.name)}> add to favorites! </button>
           </div>
         )
       })
-      : <p> Loading... </p>
+      : <p> Select a type of beer to see its list </p>
     )
 }
 export default Beerlist
