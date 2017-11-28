@@ -29,3 +29,6 @@ Syed - Backend/Frontend 💻
 Abrian - Frontend/🍻 💻
 
 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻
+
+### Wireframe: 
+![alternateText](https://i.imgur.com/4nQ6aLH.png)
