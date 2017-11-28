@@ -8,42 +8,42 @@ import Beerstyle from './Beerstyle';
 import Beerlist from './Beerlist';
 
 export default class App extends Component {
-    constructor(){
+  constructor(){
     super()
-        this.state = {
-            styleList: null,
-            dataLoaded: false,
-            beerList:null
-        }
-        this.beerOnCLick = this.beerOnCLick.bind(this)
+    this.state = {
+      styleList: null,
+      dataLoaded: false,
+      beerList:null
     }
-
+    this.beerOnCLick = this.beerOnCLick.bind(this)
+  }
 
     //on click fetch specific style beers
     beerOnCLick(id){
-        fetch(``)
-        .then(res=>res.json())
-        .then(res=> {
-            this.setState({
-                beerList: res.data,
-                dataLoaded:true
-            })
+      fetch(`http://api.brewerydb.com/v2/categories?key=cfd6716e795d949050644dde3a5f62f1&categoryId=${id}`)
+      .then(res=>res.json())
+      .then(res=> {
+        this.setState({
+          beerList: res.data,
+          dataLoaded:true
         })
+      })
+    }
+
+    getStyles() {
+      fetch('http://api.brewerydb.com/v2/categories?key=cfd6716e795d949050644dde3a5f62f1')
+      .then(res => res.json())
+      .then(res => {
+        this.setState({
+          styleList: res.data,
+          dataLoaded: true
+        })
+      })
     }
 
     componentDidMount(){
-
-        //get all beer stlyes
-        getStyles(){
-            fetch('')
-            .then(res => res.json())
-            .then(res => {
-                this.setState({
-                    styleList: res.data,
-                    dataLoaded: true
-                })
-            })
-        }
+      //get all beer stlyes
+      this.getStyles;
     }
 
   render() {
@@ -53,21 +53,8 @@ export default class App extends Component {
         <div className="App">
           <Header />
           <div className="container">
-            // <Route exact path="/" component={Home} />
-            // <Route exact path="/beer"
-            //   render={() => <BeerController currentPage="index" />}
-            // />
-            // <Route exact path="/new" render={() => (<BeerController currentPage="new" />)} />
-            // <Route exact path="/beer/edit/:id"
-            //   render={props => (<BeerController
-            //     currentPage="edit" currentId={props.match.params.id} />)}
-            // />
-            // <Route exact path="/beer/:id"
-            //   render={props => (<BeerController
-            //     currentPage="show" currentId={props.match.params.id} />)}
-            // />
 
-            <Beerstyle styleList={this.state.styleList} beerOnCLick={this.beerOnCLick} dataLoaded={this.state.dataLoaded}/>
+            <Beerstyle styleList={this.state.styleList} beerOnCLick={this.beerOnCLick} dataLoaded={this.state.dataLoaded} />
             <Beerlist beerList={this.state.beerList} dataLoaded={this.state.dataLoaded} />
 
           </div>
