@@ -2,11 +2,11 @@ import React from 'react';
 
 
 const Beerlist = props => {
-
-
+  console.log("beerlist")
+  console.log(props)
   function likeHandler(e, id){
     e.preventDefault()
-    fetch('', {
+    fetch('/api/beer', {
       method: 'POST',
       headers: {
         "Content-Type": "application/json"
