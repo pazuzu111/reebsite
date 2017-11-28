@@ -43,7 +43,7 @@ Abrian - Frontend 💻
 ### Additional REQs:
 
 We have incoperated a third part API.
-
+API Used: http://www.brewerydb.com/
 
 # 🍻 CHEERS ! 🍻
 ![alternateText](https://i.imgur.com/IDQbMlH.jpg)
