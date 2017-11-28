@@ -1,8 +1,10 @@
-export default class Likes extends Component {
+import React, { Component } from 'react';
+
+export default class Favorites extends Component {
     constructor(){
     super()
         this.state = {
-            likes: null,
+            favorites: null,
             likesLoaded: false,
         }
     }
@@ -10,24 +12,25 @@ export default class Likes extends Component {
 
     componentDidMount(){
 
-        //get all beer stlyes
-        getLikes(){
+        //get all Favorites
+        getFavorites(){
             fetch('')
             .then(res => res.json())
             .then(res => {
                 this.setState({
-                    likes: res,
+                    favorites: res,
                     likesLoaded: true
                 })
             })
         }
     }
+
     render(){
       return(
 
           {this.state.likesLoaded ?
-              props.likes.map((x, i) {
-                  <h1 key={i}> {x.number} </h1>
+              props.favorites.map((x, i) {
+                  <h1 key={i}> {x.favorites} </h1>
               })
           }
       )

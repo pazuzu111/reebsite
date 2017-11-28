@@ -26,7 +26,7 @@ const Beerlist = props => {
                 <p>{x.brewery}</p>
                 <p>{x.country}</p>
                 <p>{x.abv}</p>
-                <button onClick={()=> this.likeHandler(x.id)}> Like! </button>
+                <button onClick={()=> this.likeHandler(x.id)}> add to favorites! </button>
             })
         }
     )
