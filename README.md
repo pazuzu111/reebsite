@@ -44,7 +44,6 @@ Abrian - Frontend 💻
 
 We have incoperated a third part API.
 
-🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻
 
 # 🍻 CHEERS ! 🍻
 ![alternateText](https://i.imgur.com/IDQbMlH.jpg)
