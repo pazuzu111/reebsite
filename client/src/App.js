@@ -13,37 +13,46 @@ export default class App extends Component {
     this.state = {
       styleList: null,
       dataLoaded: false,
-      beerList:null
+      dataLoaded2: false,
+      beerList: null
     }
     this.beerOnCLick = this.beerOnCLick.bind(this)
+    this.getStyles = this.getStyles.bind(this)
   }
+
+    componentDidMount(){
+      //get all beer stlyes
+      this.getStyles();
+      console.log("styles")
+      console.log(this.state.styleList)
+    }
 
     //on click fetch specific style beers
     beerOnCLick(id){
-      fetch(`http://api.brewerydb.com/v2/categories?key=cfd6716e795d949050644dde3a5f62f1&categoryId=${id}`)
+      fetch(`https://api.brewerydb.com/v2/beers?key=3bc036cfce2c67f3aa2a2ac4c893cb41&styleId=${id}`)
       .then(res=>res.json())
       .then(res=> {
+        console.log("clickres")
+        console.log(res)
         this.setState({
           beerList: res.data,
-          dataLoaded:true
+          dataLoaded2: true
         })
       })
     }
 
+
     getStyles() {
-      fetch('http://api.brewerydb.com/v2/categories?key=cfd6716e795d949050644dde3a5f62f1')
+      fetch('https://api.brewerydb.com/v2/styles?key=3bc036cfce2c67f3aa2a2ac4c893cb41')
       .then(res => res.json())
       .then(res => {
+        console.log("stylesres")
+        console.log(res)
         this.setState({
           styleList: res.data,
           dataLoaded: true
         })
       })
-    }
-
-    componentDidMount(){
-      //get all beer stlyes
-      this.getStyles;
     }
 
   render() {
@@ -54,8 +63,11 @@ export default class App extends Component {
           <Header />
           <div className="container">
 
-            <Beerstyle styleList={this.state.styleList} beerOnCLick={this.beerOnCLick} dataLoaded={this.state.dataLoaded} />
-            <Beerlist beerList={this.state.beerList} dataLoaded={this.state.dataLoaded} />
+            <Beerstyle styleList={this.state.styleList} beerOnClick={() =>this.beerOnCLick} dataLoaded={this.state.dataLoaded} />
+            {this.state.dataLoaded2 ? (
+            <Beerlist beerList={this.state.beerList} dataLoaded={this.state.dataLoaded2} />
+            ) : (<p>Loading</p>
+            )}
 
           </div>
           <Footer />
