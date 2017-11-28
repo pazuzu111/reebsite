@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-
-
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './components/Home';
-import BeerController from './components/BeerController';
+import Beerstyle from './Beerstyle';
+import Beerlist from './Beerlist';
 
 export default class App extends Component {
     constructor(){
@@ -69,7 +67,7 @@ export default class App extends Component {
             //     currentPage="show" currentId={props.match.params.id} />)}
             // />
 
-            <Beerstyle styleList={this.state.styleList} beerOnCLick={this.beerOnCLick() dataLoaded={this.state.dataLoaded}/>
+            <Beerstyle styleList={this.state.styleList} beerOnCLick={this.beerOnCLick} dataLoaded={this.state.dataLoaded}/>
             <Beerlist beerList={this.state.beerList} dataLoaded={this.state.dataLoaded} />
 
           </div>
