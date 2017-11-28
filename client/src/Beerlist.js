@@ -14,12 +14,12 @@ const Beerlist = props => {
       })
     })
   }
-
-  return( props.dataLoaded ?
+  return(
+    props.dataLoaded ?
       props.beerList.map((x, i) => {
         return(
-          <div>
-            <img src={x.url}/>
+          <div key={i}>
+            <img src={x.labels.icon}/>
             <p>{x.name}</p>
             <p>{x.brewery}</p>
             <p>{x.country}</p>
@@ -28,6 +28,7 @@ const Beerlist = props => {
           </div>
         )
       })
+        // .then(getFavs)
       : <p> Select a type of beer to see its list </p>
     )
 }

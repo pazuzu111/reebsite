@@ -52,8 +52,6 @@ export default class App extends Component {
       <div className="App">
         <div className="App">
           <div className="container">
-
-
             <Favorites/>
             <div className="scrollContainer">
             {this.state.dataLoaded ?
@@ -65,10 +63,7 @@ export default class App extends Component {
             :
             <p> Loading... </p>}
       </div>
-
             <Beerlist beerList={this.state.beerList} dataLoaded={this.state.dataLoaded2} />
-
-
           </div>
           <Footer />
         </div>

@@ -21,6 +21,15 @@ export default class Favorites extends Component {
         })
       }
 
+    deleteFav (id) {
+      fetch(`/api/beer/${id}`, {
+        method: 'DELETE',
+      }).then(res => res.json())
+        .then(res => {
+          this.getFavorites()
+        })
+    }
+
     componentDidMount(){
       //get all Favorites
       this.getFavorites()
@@ -34,7 +43,10 @@ export default class Favorites extends Component {
           {this.state.likesLoaded ?
               this.state.favorites.beer.map((x, i) => {
                 return (
-                  <h1 key={i}> {x.brewid} </h1>
+                  <div key={i}>
+                    <h1> {x.brewid} </h1>
+                    <button className="delete" onClick={() => this.deleteFav(x.id)}>Delete</button>
+                  </div>
                 )
               })
               :
