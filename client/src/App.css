@@ -1,10 +1,11 @@
 .scrollContainer {
-  width: 700px;
+  width: 100vw;
   height: 400px;
-  background-color: floralwhite;
+  background-color: ghostwhite;
   overflow: scroll;
   margin: 0 auto;
   padding: 10px;
+  position: relative;
 }
 
 
@@ -12,10 +13,33 @@
   font-family: arial;
   font-size: 60px;
   color: darkblue;
-  width: 300px;
+  width: 450px;
   height: 250px;
   background-color: lightblue;
   border-style: 2px double darkblue;
   margin: 0 auto;
   padding: 10px;
+}
+
+
+.favs{
+  width: 400px;
+  height: 100%;
+  background-color: lightblue;
+  border: 3px double darkblue;
+  overflow: scroll;
+  margin: 0 auto;
+  padding: 10px;
+  position: absolute;
+  top: 0px;
+  right: -5px;
+}
+
+.beerListContainer{
+  background-color: floralwhite;
+  overflow: scroll;
+  width: 700px;
+  height: 370px;
+  padding:10px;
+
 }
