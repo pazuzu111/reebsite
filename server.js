@@ -16,6 +16,9 @@ app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
 });
 
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 const beerRoutes = require('./routes/beer-routes');
 app.use('/api/beer', beerRoutes);
 
