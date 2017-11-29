@@ -14,15 +14,16 @@ const Beerlist = props => {
       })
     })
   }
+
   return(
     props.dataLoaded ?
       props.beerList.map((x, i) => {
         return(
           <div key={i}>
-            <img src={x.url}/>
+            <img src={x.labels.medium}/>
             <p>{x.name}</p>
-            <p>{x.brewery}</p>
-            <p>{x.country}</p>
+            <p>{x.description}</p>
+            <p>Organic: {x.isOrganic}</p>
             <p>{x.abv}</p>
             <button onClick={() => likeHandler(x.name)}> add to favorites! </button>
           </div>

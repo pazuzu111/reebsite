@@ -40,6 +40,7 @@ export default class Favorites extends Component {
       console.log(this.state.favorites)
       return(
         <div className="favs">
+          <h1>Favorites</h1>
           {this.state.likesLoaded ?
               this.state.favorites.beer.map((x, i) => {
                 return (
