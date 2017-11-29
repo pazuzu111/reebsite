@@ -35,15 +35,14 @@ Abrian - Frontend 💻
 ![alternateText](https://i.imgur.com/4nQ6aLH.png)
 
 
-
 ### ADVANCED Wireframe: 
-![alternateText](https://i.imgur.com/Wg8n8yJ.png)
+![alternateText](https://i.imgur.com/697zShR.png)
 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻 🍻
 
 ### Additional REQs:
 
 We have incoperated a third part API.
-
+API Used: http://www.brewerydb.com/
 
 # 🍻 CHEERS ! 🍻
 ![alternateText](https://i.imgur.com/IDQbMlH.jpg)
