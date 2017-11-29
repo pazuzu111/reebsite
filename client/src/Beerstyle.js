@@ -1,13 +1,13 @@
 import React from 'react';
-import './App.css';
 
 const Beerstyle = props => {
     return(
       <div className="scrollContainer">
+        <h1> styles of beer </h1>
         {props.dataLoaded ?
             props.styleList.map((x, i) => {
             return (
-              <h1 key={i}  onClick={props.beerOnClick(props.styleList[i].id)}> {props.styleList[i].name} </h1>
+              <h3 key={i} onClick={props.beerOnClick(props.styleList[i].id)}> {props.styleList[i].name} </h3>
               )
             })
             :

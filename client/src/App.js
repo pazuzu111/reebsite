@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import Footer from './components/Footer';
-import Home from './components/Home';
-import Beerstyle from './Beerstyle';
 import Beerlist from './Beerlist';
 import Favorites from './Favorites'
+import Header from './components/Header'
+
 export default class App extends Component {
   constructor(){
     super()
@@ -12,16 +12,31 @@ export default class App extends Component {
       styleList: null,
       dataLoaded: false,
       dataLoaded2: false,
-      beerList: null
+      beerList: null,
+
     }
     this.beerOnClick = this.beerOnClick.bind(this)
     this.getStyles = this.getStyles.bind(this)
+
   }
 
     componentDidMount(){
       //get all beer stlyes
       this.getStyles();
     }
+
+
+      // getFavoritess() {
+      //   fetch('/api/beer')
+      //   .then(res => res.json())
+      //   .then(res => {
+      //     console.log(res);
+      //     this.setState({
+      //       favorites2: res.data,
+      //       likesLoaded2: true,
+      //     })
+      //   })
+      // }
 
     //on click fetch specific style beers
     beerOnClick(id){
@@ -51,19 +66,23 @@ export default class App extends Component {
     return (
       <div className="App">
         <div className="App">
+              <Header/>
+
           <div className="container">
             <Favorites/>
             <div className="scrollContainer">
-            {this.state.dataLoaded ?
-            this.state.styleList.map((x, i) => {
-            return (
-              <h1 key={i}  onClick={() => this.beerOnClick(this.state.styleList[i].id)}> {this.state.styleList[i].name} </h1>
-              )
-            })
-            :
-            <p> Loading... </p>}
-      </div>
-            <Beerlist beerList={this.state.beerList} dataLoaded={this.state.dataLoaded2} />
+              <h1> Styles of beer </h1>
+
+              {this.state.dataLoaded ?
+              this.state.styleList.map((x, i) => {
+              return (
+                <h3 key={i}  onClick={() => this.beerOnClick(this.state.styleList[i].id)}> {this.state.styleList[i].name} </h3>
+                )
+              })
+              :
+              <p> Loading... </p>}
+            </div>
+            <Beerlist beerList={this.state.beerList} dataLoaded={this.state.dataLoaded2}/>
           </div>
           <Footer />
         </div>

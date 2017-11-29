@@ -1,31 +1,42 @@
 .scrollContainer {
-  width: 100vw;
+  width: 68.6%;
   height: 400px;
-  background-color: ghostwhite;
+  background-color: gold;
   overflow: scroll;
-  margin: 0 auto;
   padding: 10px;
   position: relative;
+  color:black;
+  border: 5px solid black;
+
 }
 
+h3:hover{
+  background-color: black;
+  color:gold;
+  padding: 10px;
+  cursor: pointer;
+}
 
 .logo {
   font-family: arial;
-  font-size: 60px;
+  font-size: 20px;
   color: darkblue;
-  width: 450px;
-  height: 250px;
-  background-color: lightblue;
+  width: 99%;
+  height: 30px;
+  background-color: black;
   border-style: 2px double darkblue;
   margin: 0 auto;
   padding: 10px;
+  color: gold;
+  padding-top: 17px;
 }
 
 
 .favs{
   width: 400px;
-  height: 100%;
-  background-color: lightblue;
+  height: 96.7%;
+  background-color: black;
+  color:gold;
   border: 3px double darkblue;
   overflow: scroll;
   margin: 0 auto;
@@ -36,10 +47,30 @@
 }
 
 .beerListContainer{
-  background-color: floralwhite;
-  overflow: scroll;
-  width: 700px;
-  height: 370px;
+  border: 5px solid black;
+  background-color: gold;
+  color: black;
+  overflow: auto;
+  width: 68.6%;
+  height: 286px;
   padding:10px;
+  word-wrap: break-word;
+
+}
+
+button{
+  background-color: black;
+  color:gold;
+  padding: 10px;
+  outline: none;
+  border: 1px solid gold;
+
+}
+
+button:hover{
+  background-color: gold;
+  color: black;
+  padding: 10px;
+  border: 1px solid black;
 
 }

@@ -36,16 +36,14 @@ export default class Favorites extends Component {
     }
 
     render() {
-      console.log("state favorites")
-      console.log(this.state.favorites)
       return(
         <div className="favs">
-          <h1>Favorites</h1>
+          <h1>🍻🍻 Favorite Beers 🍻🍻</h1>
           {this.state.likesLoaded ?
               this.state.favorites.beer.map((x, i) => {
                 return (
                   <div key={i}>
-                    <h1> {x.brewid} </h1>
+                    <h3> {x.brewid} </h3>
                     <button className="delete" onClick={() => this.deleteFav(x.id)}>Delete</button>
                   </div>
                 )
