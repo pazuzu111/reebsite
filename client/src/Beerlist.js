@@ -19,7 +19,7 @@ const Beerlist = props => {
       props.beerList.map((x, i) => {
         return(
           <div key={i}>
-            <img src={x.labels.icon}/>
+            <img src={x.url}/>
             <p>{x.name}</p>
             <p>{x.brewery}</p>
             <p>{x.country}</p>
