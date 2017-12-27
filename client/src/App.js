@@ -84,7 +84,6 @@ export default class App extends Component {
             </div>
             <Beerlist beerList={this.state.beerList} dataLoaded={this.state.dataLoaded2}/>
           </div>
-          <Footer />
         </div>
 
       </div>
