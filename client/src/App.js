@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import Footer from './components/Footer';
 import Beerlist from './Beerlist';
 import Favorites from './Favorites'
 import Header from './components/Header'
@@ -16,7 +15,6 @@ export default class App extends Component {
 
     }
     this.beerOnClick = this.beerOnClick.bind(this)
-    this.getStyles = this.getStyles.bind(this)
 
   }
 
@@ -25,18 +23,6 @@ export default class App extends Component {
       this.getStyles();
     }
 
-
-      // getFavoritess() {
-      //   fetch('/api/beer')
-      //   .then(res => res.json())
-      //   .then(res => {
-      //     console.log(res);
-      //     this.setState({
-      //       favorites2: res.data,
-      //       likesLoaded2: true,
-      //     })
-      //   })
-      // }
 
     //on click fetch specific style beers
     beerOnClick(id){

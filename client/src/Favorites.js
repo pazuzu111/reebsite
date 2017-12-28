@@ -13,13 +13,19 @@ export default class Favorites extends Component {
         fetch('/api/beer')
         .then(res => res.json())
         .then(res => {
-          console.log(res);
+          console.log(res.data);
           this.setState({
             favorites: res.data,
             likesLoaded: true,
           })
-        })
+        }).catch(err => console.log(err));
+
       }
+
+componentDidMount(){
+      //get all Favorites
+      this.getFavorites()
+    }
 
     deleteFav (id) {
       fetch(`/api/beer/${id}`, {
@@ -30,10 +36,6 @@ export default class Favorites extends Component {
         })
     }
 
-    componentDidMount(){
-      //get all Favorites
-      this.getFavorites()
-    }
 
     render() {
       return(
