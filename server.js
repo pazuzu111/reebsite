@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3005;
 
 app.use(logger('dev'));
 
@@ -19,6 +19,7 @@ app.listen(PORT, () => {
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
+
 const beerRoutes = require('./routes/beer-routes');
 app.use('/api/beer', beerRoutes);
 

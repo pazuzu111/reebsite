@@ -1,38 +1,40 @@
 import React, { Component } from 'react';
 
 export default class Favorites extends Component {
-    constructor(props){
-    super(props)
+    constructor() {
+    super()
         this.state = {
             favorites: [],
             likesLoaded: false,
         }
     }
 
-      getFavorites() {
-        fetch('/api/beer')
-        .then(res => res.json())
-        .then(res => {
-          console.log(res);
-          this.setState({
-            favorites: res.data,
-            likesLoaded: true,
-          })
+    getFavorites = () => {
+      fetch('/api/beer')
+      .then(res => res.json())
+      .then(res => {
+        console.log(res.data);
+        this.setState({
+          favorites: res.data,
+          likesLoaded: true,
         })
-      }
+      }).catch(err => console.log(err));
 
-    deleteFav (id) {
-      fetch(`/api/beer/${id}`, {
-        method: 'DELETE',
-      }).then(res => res.json())
-        .then(res => {
-          this.getFavorites()
-        })
     }
 
-    componentDidMount(){
+    componentDidMount() {
       //get all Favorites
       this.getFavorites()
+    }
+
+    deleteFav = (id) => {
+      fetch(`/api/beer/${id}`, {
+        method: 'DELETE',
+      })
+      .then(res => res.json())
+      .then(res => {
+        this.getFavorites()
+      })
     }
 
     render() {
