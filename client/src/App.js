@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import './App.css';
 import Beerlist from './Beerlist';
 import Favorites from './Favorites'
 import Header from './components/Header'
+
+import './App.css';
 
 export default class App extends Component {
   constructor(){
