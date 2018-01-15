@@ -12,11 +12,8 @@ export default class App extends Component {
       styleList: null,
       dataLoaded: false,
       dataLoaded2: false,
-      beerList: null,
-
+      beerList: null
     }
-    this.beerOnClick = this.beerOnClick.bind(this)
-
   }
 
     componentDidMount(){
@@ -26,7 +23,7 @@ export default class App extends Component {
 
 
     //on click fetch specific style beers
-    beerOnClick(id){
+    beerOnClick = (id) => {
       fetch(`https://api.brewerydb.com/v2/beers?key=4aa4b1906564a0a282453e69a7eeaf9a&styleId=${id}`)
       .then(res=>res.json())
       .then(res=> {
@@ -38,7 +35,7 @@ export default class App extends Component {
     }
 
 
-    getStyles() {
+    getStyles = () => {
       fetch('https://api.brewerydb.com/v2/styles?key=4aa4b1906564a0a282453e69a7eeaf9a')
       .then(res => res.json())
       .then(res => {
@@ -54,7 +51,6 @@ export default class App extends Component {
       <div className="App">
         <div className="App">
               <Header/>
-
           <div className="container">
             <Favorites/>
             <div className="scrollContainer">
@@ -63,7 +59,7 @@ export default class App extends Component {
               {this.state.dataLoaded ?
               this.state.styleList.map((x, i) => {
               return (
-                <h3 key={i}  onClick={() => this.beerOnClick(this.state.styleList[i].id)}> {this.state.styleList[i].name} </h3>
+                <h3 key={i} onClick={() => this.beerOnClick(this.state.styleList[i].id)}> {this.state.styleList[i].name} </h3>
                 )
               })
               :
