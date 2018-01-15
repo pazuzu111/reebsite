@@ -15,22 +15,24 @@ const Beerlist = props => {
     })
   }
 
-  return(
+  return (
         <div className="beerListContainer">
               <h1> Beer List</h1>
-          {props.dataLoaded ?
-            props.beerList.map((x, i) => {
-              return(
-                <div key={i}>
-                  <h4>{x.name}</h4>
-                  <h4>{x.description}</h4>
-                  <h4>Organic: {x.isOrganic}</h4>
-                  <h4>{x.abv}</h4>
-                  <button onClick={() => likeHandler(x.name)}> add to favorites! </button>
-                </div>
-              )
-            })
-            : <p> Select a type of beer to see its list </p>}
+            {props.dataLoaded ?
+                props.beerList.map((x, i) => {
+                    return (
+                        <div key={i}>
+                          <h4>{x.name}</h4>
+                          <h4>{x.description}</h4>
+                          <h4>Organic: {x.isOrganic}</h4>
+                          <h4>{x.abv}</h4>
+                          <button onClick={() => likeHandler(x.name)}> add to favorites! </button>
+                        </div>
+                    )
+                })
+                :
+                <p> Select a type of beer to see its list </p>
+            }
         </div>
     )
 }

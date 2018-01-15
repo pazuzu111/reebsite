@@ -16,34 +16,32 @@ export default class App extends Component {
     }
   }
 
-    componentDidMount(){
-      //get all beer stlyes
-      this.getStyles();
+    componentDidMount() {
+        //get all beer stlyes
+        this.getStyles();
     }
-
 
     //on click fetch specific style beers
     beerOnClick = (id) => {
-      fetch(`https://api.brewerydb.com/v2/beers?key=4aa4b1906564a0a282453e69a7eeaf9a&styleId=${id}`)
-      .then(res=>res.json())
-      .then(res=> {
-        this.setState({
-          beerList: res.data,
-          dataLoaded2: true
+        fetch(`https://api.brewerydb.com/v2/beers?key=4aa4b1906564a0a282453e69a7eeaf9a&styleId=${id}`)
+        .then(res=>res.json())
+        .then(res=> {
+            this.setState({
+              beerList: res.data,
+              dataLoaded2: true
+            })
         })
-      })
     }
 
-
     getStyles = () => {
-      fetch('https://api.brewerydb.com/v2/styles?key=4aa4b1906564a0a282453e69a7eeaf9a')
-      .then(res => res.json())
-      .then(res => {
-        this.setState({
-          styleList: res.data,
-          dataLoaded: true
+        fetch('https://api.brewerydb.com/v2/styles?key=4aa4b1906564a0a282453e69a7eeaf9a')
+        .then(res => res.json())
+        .then(res => {
+            this.setState({
+              styleList: res.data,
+              dataLoaded: true
+            })
         })
-      })
     }
 
   render() {
@@ -55,15 +53,15 @@ export default class App extends Component {
             <Favorites/>
             <div className="scrollContainer">
               <h1> Styles of beer </h1>
-
-              {this.state.dataLoaded ?
-              this.state.styleList.map((x, i) => {
-              return (
-                <h3 key={i} onClick={() => this.beerOnClick(this.state.styleList[i].id)}> {this.state.styleList[i].name} </h3>
-                )
-              })
-              :
-              <p> Loading... </p>}
+                {this.state.dataLoaded ?
+                    this.state.styleList.map((x, i) => {
+                        return (
+                            <h3 key={i} onClick={() => this.beerOnClick(this.state.styleList[i].id)}> {this.state.styleList[i].name} </h3>
+                        )
+                    })
+                    :
+                    <p> Loading... </p>
+                }
             </div>
             <Beerlist beerList={this.state.beerList} dataLoaded={this.state.dataLoaded2}/>
           </div>

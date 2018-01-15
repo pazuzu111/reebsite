@@ -4,8 +4,8 @@ export default class Favorites extends Component {
     constructor() {
     super()
         this.state = {
-            favorites: [],
-            likesLoaded: false,
+          favorites: [],
+          likesLoaded: false
         }
     }
 
@@ -38,20 +38,22 @@ export default class Favorites extends Component {
     }
 
     render() {
-      return(
-        <div className="favs">
-          <h1>🍻🍻 Favorite Beers 🍻🍻</h1>
-          {this.state.likesLoaded ?
-              this.state.favorites.beer.map((x, i) => {
-                return (
-                  <div key={i}>
-                    <h3> {x.brewid} </h3>
-                    <button className="delete" onClick={() => this.deleteFav(x.id)}>Delete</button>
-                  </div>
-                )
-              })
-              :
-              <p>loading</p>}
-        </div>
-      )}
-  }
+        return (
+            <div className="favs">
+              <h1>🍻🍻 Favorite Beers 🍻🍻</h1>
+                {this.state.likesLoaded ?
+                    this.state.favorites.beer.map((x, i) => {
+                        return (
+                            <div key={i}>
+                                <h3> {x.brewid} </h3>
+                                <button className="delete" onClick={() => this.deleteFav(x.id)}>Delete</button>
+                            </div>
+                        )
+                    })
+                    :
+                    <p>loading</p>
+                }
+            </div>
+        )
+    }
+}
