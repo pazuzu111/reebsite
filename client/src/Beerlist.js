@@ -3,7 +3,7 @@ import React from 'react';
 
 const Beerlist = props => {
 
-  function likeHandler(name){
+  const likeHandler = (name) => {
     fetch('/api/beer', {
       method: 'POST',
       headers: {
