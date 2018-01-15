@@ -2,9 +2,8 @@
   width: 68.6%;
   height: 400px;
   background-color: gold;
-  overflow: scroll;
+  overflow: auto;
   padding: 10px;
-  position: relative;
   color:black;
   border: 5px solid black;
 
@@ -22,7 +21,7 @@ h3:hover{
   font-size: 20px;
   color: darkblue;
   width: 99%;
-  height: 30px;
+  height: 30%;
   background-color: black;
   border-style: 2px double darkblue;
   margin: 0 auto;
@@ -34,12 +33,11 @@ h3:hover{
 
 .favs{
   width: 400px;
-  height: 96.7%;
+  height: 100%;
   background-color: black;
   color:gold;
   border: 3px double darkblue;
-  overflow: scroll;
-  margin: 0 auto;
+  overflow: auto;
   padding: 10px;
   position: absolute;
   top: 0px;
@@ -52,7 +50,7 @@ h3:hover{
   color: black;
   overflow: auto;
   width: 68.6%;
-  height: 286px;
+  height: 304px;
   padding:10px;
   word-wrap: break-word;
 
