@@ -3,7 +3,7 @@ import React from 'react';
 
 const Beerlist = props => {
 
-  function likeHandler(name){
+  const likeHandler = (name) => {
     fetch('/api/beer', {
       method: 'POST',
       headers: {
@@ -13,7 +13,6 @@ const Beerlist = props => {
         brewid:name,
       })
     })
-
   }
 
   return(
@@ -35,4 +34,5 @@ const Beerlist = props => {
         </div>
     )
 }
+
 export default Beerlist
