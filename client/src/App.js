@@ -56,14 +56,14 @@ export default class App extends Component {
                 {this.state.dataLoaded ?
                     this.state.styleList.map((x, i) => {
                         return (
-                            <h3 key={i} onClick={() => this.beerOnClick(this.state.styleList[i].id)}> {this.state.styleList[i].name} </h3>
+                            <h3 key={i} onClick={() => this.beerOnClick(this.state.styleList[i].id)}> {x[i].name} </h3>
                         )
                     })
                     :
                     <p> Loading... </p>
                 }
             </div>
-            <Beerlist beerList={this.state.beerList} dataLoaded={this.state.dataLoaded2}/>
+            <Beerlist beerList={this.state.beerList} dataLoaded={this.state.dataLoaded2} />
           </div>
         </div>
 

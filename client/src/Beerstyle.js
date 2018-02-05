@@ -7,7 +7,7 @@ const Beerstyle = props => {
         {props.dataLoaded ?
             props.styleList.map((x, i) => {
             return (
-              <h3 key={i} onClick={props.beerOnClick(props.styleList[i].id)}> {props.styleList[i].name} </h3>
+              <h3 key={i} onClick={props.beerOnClick(x[i].id)}> {x[i].name} </h3>
               )
             })
             :
